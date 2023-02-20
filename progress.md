@@ -1,0 +1,1 @@
+- Working navbar and animation
