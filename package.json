@@ -1,40 +1,39 @@
 {
-    "name": "grogetterfrontend",
-    "version": "1.0.0",
-    "description": "A project for software engineering class. The project idea is to create \r an application to help customers keep track of groceries: current items and items to buy.",
-    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "eject": "react-scripts eject"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/zhangdzh/GroGetterFrontend.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/zhangdzh/GroGetterFrontend/issues"
-    },
-    "homepage": "https://github.com/zhangdzh/GroGetterFrontend#readme",
-    "dependencies": {
-      "babel-cli": "^6.26.0",
-      "babel-preset-react-app": "^3.1.2",
-      "react-scripts": "^5.0.1"
-    },
-    "browserslist": {
-      "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-      ],
-      "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
-      ]
-    }
+  "name": "grogetterfrontend",
+  "version": "1.0.0",
+  "description": "A project for software engineering class. The project idea is to create \r an application to help customers keep track of groceries: current items and items to buy.",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangdzh/GroGetterFrontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangdzh/GroGetterFrontend/issues"
+  },
+  "homepage": "https://github.com/zhangdzh/GroGetterFrontend#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
-  
+}
