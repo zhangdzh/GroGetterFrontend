@@ -22,13 +22,15 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
   },
   "browser": {
     "fs": false,
     "path": false,
     "os": false,
-    "http": false,
+    "https": false,
     "web-vitals": false
   },
   "browserslist": {
@@ -42,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0"
   }
 }
