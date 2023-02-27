@@ -27,4 +27,5 @@ fs.readFile('../public/index.html', function (err, html) {
 //         </body>
 //     )
 // }
+// export default App;
 
