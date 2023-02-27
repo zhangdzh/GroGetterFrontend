@@ -13,3 +13,18 @@ fs.readFile('../public/index.html', function (err, html) {
         response.end();  
     }).listen(PORT);
 });
+
+// I haven't seen an app.js file that looks like that? 
+// i think it usually looks like this:
+
+// import React from 'react';
+// import Nav from './nav.js';
+
+// function App() {
+//     return (
+//         <body>
+//             <Nav />
+//         </body>
+//     )
+// }
+
