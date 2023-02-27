@@ -14,3 +14,11 @@ http://zhangdzh.pythonanywhere.com/
 To run locally, run `node App.js`.
 Alternatively, type `npm start`, and make sure you have node.js or npm installed.
 Navigate to http://localhost:3000 in your browser.
+
+
+### setup
+- install npm
+- install node.js?
+- install react-scripts
+- `npm install` for dependencies
+- `npm start` to run
