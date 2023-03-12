@@ -8,6 +8,7 @@ body{
 div{
 	box-sizing: border-box;
 }
+
 nav{
 	background: lightskyblue;
 	display: flex;

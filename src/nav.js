@@ -1,5 +1,6 @@
 // react component for the navigation bar
 import React from 'react';
+import './style.css'; 
 // import { Link } from 'react-router-dom';s
 
 const Nav = () => {
