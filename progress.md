@@ -1,1 +1,2 @@
 - Working navbar and animation
+- starting a list of groceries
