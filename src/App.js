@@ -18,13 +18,19 @@
 // i think it usually looks like this:
 
 import React from 'react';
-import Nav from './nav.js';
+import Navbar from './nav.js';
 
 function App() {
     return (
-        <body>
-            <Nav />
-        </body>
+        <Router>
+            <Navbar />
+            <Routes>
+
+            </Routes>
+        </Router>
+        // <body>
+        //     <Nav />
+        // </body>
     )
 }
 export default App;
