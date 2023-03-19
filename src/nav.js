@@ -15,7 +15,7 @@ const Nav = () => {
         <a href="about.html">About Us</a>
         <a href="addList.html">Add List</a>
         <a href="manageList.html">Manage List</a>
-
+        <a href="login.html">LogIn/SignUp</a> 
       </ul>
     </nav>
   )
