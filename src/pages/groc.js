@@ -5,9 +5,9 @@ return (
 	<div
 	style={{
 		display: 'flex',
-		justifyContent: 'Right',
-		alignItems: 'Right',
-		height: '100vh'
+		justifyContent: 'Left',
+		alignItems: 'Left',
+		height: '10vh'
 	}}
 	>
 	<h1>Manage your Grocery List here!</h1>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SignUp = () => {
+const SignIn = () => {
 return (
 	<div
 	style={{
@@ -10,9 +10,9 @@ return (
 		height: '10vh'
 	}}
 	>
-	<h1>New User: Sign Up</h1>
+	<h1>Returning User: Sign In</h1>
 	</div>
 );
 };
 
-export default SignUp;
+export default SignIn;
