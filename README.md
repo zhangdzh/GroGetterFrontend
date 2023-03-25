@@ -17,8 +17,7 @@ Navigate to http://localhost:3000 in your browser.
 
 
 ### setup
-1. cd navigation-bar
-2. npm install react-router-dom
-3. npm install --save styled-components
-4. npm install react-icons
-5. npm start
+1. npm install react-router-dom
+2. npm install --save styled-components
+3. npm install react-icons
+4. npm start
