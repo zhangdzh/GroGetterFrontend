@@ -1,3 +1,0 @@
-- create a view for displaying the list of groceries
-- have a login page
-- fetch from database for user and groceries

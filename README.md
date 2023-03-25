@@ -17,8 +17,14 @@ Navigate to http://localhost:3000 in your browser.
 
 
 ### setup
-- install npm
+<!-- - install npm
 - install node.js?
 - install react-scripts
 - `npm install` for dependencies
-- `npm start` to run
+- `npm start` to run -->
+1. npx create-react-app navigation-bar
+2. cd navigation-bar
+3. npm install react-router-dom
+4. npm install --save styled-components
+5. npm install react-icons
+6. npm start
