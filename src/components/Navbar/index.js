@@ -15,13 +15,13 @@ return (
 		<Bars />
 
 		<NavMenu>
-		<NavLink to='/about' activeStyle>
+		<NavLink to='/about' activestyle={{ color:'black' }}>
 			About
 		</NavLink>
-		<NavLink to='/groc' activeStyle>
+		<NavLink to='/groc' activestyle={{ color:'black' }}>
 			Grocery List
 		</NavLink>
-		<NavLink to='/signup' activeStyle>
+		<NavLink to='/signup' activestyle={{ color:'black' }}>
 			Sign Up
 		</NavLink>
 		{/* Second Nav */}

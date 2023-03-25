@@ -12,10 +12,10 @@ return (
 	<Router>
 	<Navbar />
 	<Routes>
-		<Route path='/' exact component={Home} />
-		<Route path='/about' component={About} />
-		<Route path='/groc' component={Groc} />
-		<Route path='/signup' component={SignUp} />
+		<Route path='/' element={<Home />} />
+		<Route path='/about' celement={<About />} />
+		<Route path='/groc' element={<Groc />} />
+		<Route path='/signup' element={<SignUp />} />
 	</Routes>
 	</Router>
 );

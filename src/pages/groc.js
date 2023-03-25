@@ -10,7 +10,7 @@ return (
 		height: '100vh'
 	}}
 	>
-	<h1>Welcome to GeeksforGeeks Team</h1>
+	<h1>Manage your Grocery List here!</h1>
 	</div>
 );
 };

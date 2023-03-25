@@ -10,7 +10,7 @@ const About = () => {
         height: '100vh'
       }}
     >
-      <h1>GeeksforGeeks is a Computer Science portal for geeks.</h1>
+      <h1>About GroGetter</h1>
     </div>
   );
 };
