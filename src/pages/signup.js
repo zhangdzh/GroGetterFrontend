@@ -31,7 +31,7 @@ const SignUp = () => {
 
 			// reset states if ok
 			if (res.status === 200) {
-				setName("");
+				setUserame("");
 				setEmail("");
 				setPassword("");
 				setMessage("User created successfully");
