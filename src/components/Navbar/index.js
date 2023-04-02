@@ -15,6 +15,9 @@ return (
 		<Bars />
 
 		<NavMenu>
+		<NavLink to='/' activestyle={{ color:'black' }}>
+			Home
+		</NavLink>
 		<NavLink to='/about' activestyle={{ color:'black' }}>
 			About
 		</NavLink>
