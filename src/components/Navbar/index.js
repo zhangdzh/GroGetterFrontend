@@ -7,6 +7,7 @@ NavMenu,
 NavBtn,
 NavBtnLink,
 } from './NavbarElements';
+import logo from "../../../src/logo192.png";
 
 const Navbar = () => {
 return (
@@ -15,8 +16,8 @@ return (
 		<Bars />
 
 		<NavMenu>
-		<NavLink to='/' activestyle={{ color:'black' }}>
-			Home
+		<NavLink to='/'>
+			<a href="/"><img style={{ width: "30%", height: "40%" }} src={logo} alt=""/></a>
 		</NavLink>
 		<NavLink to='/about' activestyle={{ color:'black' }}>
 			About
