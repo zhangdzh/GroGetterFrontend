@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-// not sure what our MongoDB database link is
-const backendURL = 'http://localhost:3000';
+// python anywhere backend link
+const backendURL = 'zhangdzh.pythonanywhere.com';
 
 const SignUp = () => {
 	const [username, setUsername] = useState('');
