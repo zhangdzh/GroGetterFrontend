@@ -7,8 +7,8 @@ A frontend for the project for design project class. The project idea is to crea
 - Jun Hyung Kim
 - Yeseon Kim
 
-### Web link:
-http://zhangdzh.pythonanywhere.com/
+### Web link: deploed on Heroku
+https://grogetter-app.herokuapp.com/
 
 ### Run in localhost
 To run locally, run `node App.js`.
