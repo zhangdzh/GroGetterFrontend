@@ -41,6 +41,7 @@ const SignUp = () => {
 		} catch (err) {
 			console.log(err);
 		}
+		console.log(message)
 	};
 
 	return (
@@ -76,7 +77,8 @@ const SignUp = () => {
 				<button type='submit'>Sign Up</button>
 
 				{/* creates an alert if there is an error */}
-				<alert>{message ? <p>{message}</p> : null}</alert>
+				{message ? <div>{message}</div> : null}
+
 			</form>
 		</div>
 	);
