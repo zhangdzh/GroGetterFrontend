@@ -23,6 +23,28 @@ const SignIn = () => {
 
     let userJSON = getUserList();
 
+    // start test
+    const batchTrack = document.getElementById("batchSelect");
+
+    const displayOption = async () => {
+        const options = getUserList();
+        options.then(function (result) {
+            console.log('result:', result);
+            for (const option of result) {
+                console.log(option);
+                const newOption = document.createElement("option");
+                newOption.value = option;
+                newOption.text = option;
+                batchTrack.appendChild(newOption);
+            }
+
+        });
+
+    };
+
+    displayOption();
+    // end test
+
     return (
         <div
             style={{
@@ -35,12 +57,7 @@ const SignIn = () => {
             }}
         >
             <h1>Returning User: Sign In</h1>
-            <Dropdown>
-                <Option selected value="Usernames" />
-                <Option value="Option 1" />
-                <Option value="Option 2" />
-                <Option value="Option 3" />
-            </Dropdown>
+            <select id="batchSelect"></select>
         </div>
     );
 };
