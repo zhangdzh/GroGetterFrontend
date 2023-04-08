@@ -8,11 +8,14 @@ const SignIn = () => {
 
     const getUserList = async () => {
         try {
-            const emails = [];
             const fetchResponse = await fetch(`https://${backendURL}/users/dict`);
             const data = await fetchResponse.json();
-            console.log(data['Data']['user2'].email);
-            return data["Data"];
+            const users = Object.keys(data['Data'])
+            // console.log(Object.keys(data['Data']));
+            // console.log(data['Data']['user2'].email);
+            // return data["Data"];
+            console.log(users);
+            return users;
         } catch (e) {
             return e;
         }
