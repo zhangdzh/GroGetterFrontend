@@ -16,6 +16,7 @@ export function Dropdown(props) {
       <StyledSelect id="services" name="services">
         {props.children}
       </StyledSelect>
+      <input style={{width: '30vh', padding: 5, marginBottom: 20}} type="password" />
       <StyledButton type="submit" value={props.buttonText} />
     </DropdownWrapper>
   );
