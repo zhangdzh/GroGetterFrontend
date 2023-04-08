@@ -12,7 +12,7 @@ return (
 			fontSize: '6vw',
 			paddingTop: '0',
 			paddingLeft: '10rem', 
-			height: '90vh',
+			height: '89vh',
 			color: 'White',
 			textShadow: '1px 1px 50px black',
 			overflow: 'hidden',
