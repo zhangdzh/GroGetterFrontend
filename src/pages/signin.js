@@ -7,24 +7,18 @@ const SignIn = () => {
 const backendURL = 'zhangdzh.pythonanywhere.com';
 
 const getUserList = async () => {
-	const settings = {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        }
-    };
     try {
-        const fetchResponse = await fetch(`https://${backendURL}/users/dict/`, settings);
+		const fetchResponse = await fetch(`https://${backendURL}/users/dict`);
         const data = await fetchResponse.json();
-		console.log(data); 
-        return data;
+		console.log(data['Data']);
+        return data['Data'];
     } catch (e) {
         return e;
     }    
 };
 
-getUserList(); 
+let userJSON = getUserList(); 
+console.log(userJSON);
 
 return (
 	<div
