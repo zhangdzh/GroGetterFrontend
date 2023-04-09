@@ -1,5 +1,5 @@
 // import React, { useState } from 'react';
-import { Dropdown, Option } from "../components/Dropdown/dropdown";
+// import { Dropdown, Option } from "../components/Dropdown/dropdown";
 
 const SignIn = () => {
 
@@ -14,14 +14,13 @@ const SignIn = () => {
             // console.log(Object.keys(data['Data']));
             // console.log(data['Data']['user2'].email);
             // return data["Data"];
-            console.log(users);
             return users;
         } catch (e) {
             return e;
         }
     };
 
-    let userJSON = getUserList();
+    // let userJSON = getUserList();
 
     // start test
     const batchTrack = document.getElementById("batchSelect");
@@ -29,14 +28,22 @@ const SignIn = () => {
     const displayOption = async () => {
         const options = getUserList();
         options.then(function (result) {
+            console.log("hi");
             console.log('result:', result);
-            for (const option of result) {
-                console.log(option);
+            for (let i = 0; i < result.length; i++) {
                 const newOption = document.createElement("option");
-                newOption.value = option;
-                newOption.text = option;
+                newOption.value = result[i];
+                newOption.text = result[i];
                 batchTrack.appendChild(newOption);
             }
+            // for (var option of result) {
+            //     // console.log(option);
+            //     const newOption = document.createElement("option");
+            //     // newOption.value = option;
+            //     newOption.text = option;
+            //     batchTrack.appendChild(newOption);
+            //     console.log(batchTrack);
+            // }
 
         });
 
@@ -53,6 +60,7 @@ const SignIn = () => {
                 flexDirection: 'Column',
                 alignItems: 'Left',
                 height: '10vh',
+                width: '50%',
                 paddingLeft: '10rem'
             }}
         >
