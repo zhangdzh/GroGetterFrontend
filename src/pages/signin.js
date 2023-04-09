@@ -5,6 +5,7 @@ const SignIn = () => {
 
     // python anywhere backend link
     const backendURL = 'zhangdzh.pythonanywhere.com';
+	const batchTrack = document.getElementById("batchSelect");
 
     const getUserList = async () => {
         try {
@@ -14,16 +15,24 @@ const SignIn = () => {
             // console.log(Object.keys(data['Data']));
             // console.log(data['Data']['user2'].email);
             // return data["Data"];
-            return users;
+			for (let i = 0; i < users.length; i++) {
+				console.log("users", users)
+                const newOption = document.createElement("option");
+                newOption.value = users[i];
+                newOption.text = users[i];
+                batchTrack.appendChild(newOption);
+            }
+            //return users;
         } catch (e) {
             return e;
         }
     };
 
+	getUserList()
     // let userJSON = getUserList();
 
     // start test
-    const batchTrack = document.getElementById("batchSelect");
+    //const batchTrack = document.getElementById("batchSelect");
 
     const displayOption = async () => {
         const options = getUserList();
@@ -49,7 +58,7 @@ const SignIn = () => {
 
     };
 
-    displayOption();
+    //displayOption();
     // end test
 
     return (
