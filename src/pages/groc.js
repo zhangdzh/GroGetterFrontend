@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import background from '../imgs/yellow_background.jpg'
 
 // python anywhere backend link
 const backendURL = 'zhangdzh.pythonanywhere.com';
@@ -45,25 +46,29 @@ const Groc = () => {
 
 	return (
 		<div
-			style={{
-				display: 'flex',
-				justifyContent: 'Left',
-				alignItems: 'Left',
-				height: '10vh'
-			}}
+		sytle={{
+			backgroundImage: `url(${background})`,
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            height: '89vh',
+            backgroundAttachment: 'fixed',
+            overflow: 'hidden'
+		}}
 		>
-			<h1>Manage your Grocery List here!</h1>
+			<div
+				style={{
+					display: 'flex',
+                    justifyContent: 'Left',
+                    flexDirection: 'Column',
+                    alignItems: 'Left',
+                    height: '10vh',
+                    paddingLeft: '15rem'
+				}}
+			>
+				<h1>Manage your Grocery List here!</h1>
 
-			{/* button that calls grocDict function */}
-			<button onClick={grocDict}>Get Grocery Dictionary</button>
-			<ul>
-				{Object.entries(groceryDict).map(([key, value]) => (
-					<li key={key}>
-						<strong>{key}: </strong>
-						{JSON.stringify(value)}
-					</li>
-				))}
-			</ul>
+			</div>
 		</div>
 	);
 };
