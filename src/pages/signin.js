@@ -57,15 +57,15 @@ const SignIn = () => {
                 <h1>Returning User: Sign In</h1>
                 <div className="username">
                     <label>Username     </label>
-                    <select id="batchSelect" style={{height:"3vh", width:"20vh"}}> {users} </select>
+                    <select id="batchSelect" style={{height:"3.5vh", width:"20vh"}}> {users} </select>
                 </div>
                 <form>
-                    <div className="password" style={{height:"3vh", paddingTop:"0.5rem", paddingBottom:"0.5rem"}}>
+                    <div className="password" style={{paddingTop:"0.5rem", paddingBottom:"0.5rem"}}>
                         <label>Password     </label>
-                        <input type="password" name="pass" required />
+                        <input placeholder='Password' type="password" name="pass" style={{height:"2.5vh", width:"20vh"}} required />
                     </div>
                     <div className="button">
-                        <input type="submit" style={{height:"3vh"}}/>
+                        <input type="submit" style={{height:"3.5vh"}}/>
                     </div>
                 </form>
                 <a href="./signup" style={{textDecoration:"none", paddingTop:"1rem"}}>

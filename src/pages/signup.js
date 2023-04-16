@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import background from '../imgs/yellow_background.jpg'
 
 // python anywhere backend link
 const backendURL = 'zhangdzh.pythonanywhere.com';
@@ -46,42 +47,63 @@ const SignUp = () => {
 
 	return (
 		<div
-			style={{
-				display: 'flex',
-				justifyContent: 'Left',
-				flexDirection: 'Column',
-				alignItems: 'Left',
-				height: '10vh', 
-				paddingLeft: '15rem'
-			}}
-		>
-			<h1>New User: Sign Up</h1>
-			{/* form that calls addUser once submitted */}
-			<form onSubmit={addUser}>
-				<input
-					type='text'
-					placeholder='Username'
-					value={username}
-					onChange={(e) => setUsername(e.target.value)}
-				/>
-				<input
-					type='text'
-					placeholder='Email'
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-				/>
-				<input
-					type='text'
-					placeholder='Password'
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-				/>
-				<button type='submit'>Sign Up</button>
+        style = {{
+            backgroundImage: `url(${background})`,
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            height: '89vh',
+            backgroundAttachment: 'fixed',
+            overflow: 'hidden'
+        }}
+        >
+			<div
+				style={{
+					display: 'flex',
+					justifyContent: 'Left',
+					flexDirection: 'Column',
+					alignItems: 'Left',
+					height: '10vh', 
+					paddingLeft: '15rem'
+				}}
+			>
+				<h1>New User: Sign Up</h1>
+				{/* form that calls addUser once submitted */}
+				<form onSubmit={addUser}>
+					<div style={{paddingBottom: "0.5rem"}}>
+					<input
+						type='text'
+						placeholder='Username'
+						value={username}
+						onChange={(e) => setUsername(e.target.value)}
+						style={{height:"2.5vh", width:"20vh"}}
+					/><br></br>
+					</div>
+					<div style={{paddingBottom: "0.5rem"}}>
+					<input
+						type='text'
+						placeholder='Email'
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						style={{height:"2.5vh", width:"20vh"}}
+					/><br></br>
+					</div>
+					<div style={{paddingBottom: "0.75rem"}}>
+					<input
+						type='text'
+						placeholder='Password'
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+						style={{height:"2.5vh", width:"20vh"}}
+					/><br></br>
+					</div>
+					<button type='submit' style={{height:"3.5vh"}}>Sign Up</button>
 
-				{/* creates an alert if there is an error */}
-				{message ? <div>{message}</div> : null}
+					{/* creates an alert if there is an error */}
+					{message ? <div>{message}</div> : null}
 
-			</form>
+				</form>
+			</div>
 		</div>
 	);
 };
