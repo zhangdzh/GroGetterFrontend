@@ -23,8 +23,8 @@ return (
 			flexDirection: 'Column',
 			alignItems: 'Left',
 			height: '10vh',
-			width: '80%',
-			paddingLeft: '10rem',
+			width: '65%',
+			paddingLeft: '15rem',
 		}}
 		>
 		<h1>About</h1>
@@ -41,7 +41,7 @@ return (
 			justifyContent: 'Left',
 			alignItems: 'Left',
 			paddingBottom: '7vh',
-			paddingLeft: '16%'
+			paddingLeft: '10%'
 		}}
 		>
 			<h2>Yeseon: </h2>
