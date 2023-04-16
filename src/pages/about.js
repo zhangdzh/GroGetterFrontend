@@ -11,7 +11,7 @@ return (
 		backgroundSize: 'cover', 
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
-		height: '125vh',
+		height: '52rem',
 		backgroundAttachment: 'fixed',
 		overflow: 'hidden'
 	}}
