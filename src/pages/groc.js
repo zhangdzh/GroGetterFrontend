@@ -46,24 +46,24 @@ const Groc = () => {
 
 	return (
 		<div
-		sytle={{
-			backgroundImage: `url(${background})`,
+        style = {{
+            backgroundImage: `url(${background})`,
             backgroundSize: 'cover', 
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             height: '89vh',
             backgroundAttachment: 'fixed',
             overflow: 'hidden'
-		}}
-		>
+        }}
+        >
 			<div
 				style={{
 					display: 'flex',
-                    justifyContent: 'Left',
-                    flexDirection: 'Column',
-                    alignItems: 'Left',
-                    height: '10vh',
-                    paddingLeft: '15rem'
+					justifyContent: 'Left',
+					flexDirection: 'Column',
+					alignItems: 'Left',
+					height: '10vh',
+					paddingLeft: '15rem'
 				}}
 			>
 				<h1>Manage your Grocery List here!</h1>
