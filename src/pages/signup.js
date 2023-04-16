@@ -49,8 +49,10 @@ const SignUp = () => {
 			style={{
 				display: 'flex',
 				justifyContent: 'Left',
+				flexDirection: 'Column',
 				alignItems: 'Left',
-				height: '10vh'
+				height: '10vh', 
+				paddingLeft: '15rem'
 			}}
 		>
 			<h1>New User: Sign Up</h1>

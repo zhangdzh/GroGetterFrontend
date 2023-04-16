@@ -39,7 +39,7 @@ const SignIn = () => {
                 flexDirection: 'Column',
                 alignItems: 'Left',
                 height: '10vh',
-                paddingLeft: '10rem'
+                paddingLeft: '15rem'
             }}
         >
             <h1>Returning User: Sign In</h1>
@@ -56,8 +56,8 @@ const SignIn = () => {
                     <input type="submit" style={{height:"3vh"}}/>
                 </div>
             </form>
-            <a href="./signup" style={{paddingTop:"0.5rem"}}>
-                <u style={{fontSize:"15px"}}> Don't have an account: Sign Up</u>
+            <a href="./signup" style={{textDecoration:"none", paddingTop:"1rem"}}>
+                Don't have an account: Sign Up
             </a>
         </div>
     );
