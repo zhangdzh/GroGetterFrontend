@@ -39,12 +39,26 @@ const SignIn = () => {
                 flexDirection: 'Column',
                 alignItems: 'Left',
                 height: '10vh',
-                width: '50%',
                 paddingLeft: '10rem'
             }}
         >
             <h1>Returning User: Sign In</h1>
-            <select id="batchSelect"> {users} </select>
+            <div className="username">
+                <label>Username     </label>
+                <select id="batchSelect" style={{height:"3vh", width:"20vh"}}> {users} </select>
+            </div>
+            <form>
+                <div className="password" style={{height:"3vh", paddingTop:"0.5rem", paddingBottom:"0.5rem"}}>
+                    <label>Password     </label>
+                    <input type="password" name="pass" required />
+                </div>
+                <div className="button">
+                    <input type="submit" style={{height:"3vh"}}/>
+                </div>
+            </form>
+            <a href="./signup" style={{paddingTop:"0.5rem"}}>
+                <u style={{fontSize:"15px"}}> Don't have an account: Sign Up</u>
+            </a>
         </div>
     );
 };
