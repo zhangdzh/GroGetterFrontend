@@ -87,6 +87,12 @@ const SignUp = () => {
 				stateObj[name] = "Please enter Username.";
 			  }
 			  break;
+
+			case "email":
+			  if (!value) {
+				stateObj[name] = "Please enter Email.";
+			  }
+			  break; 
 	   
 			case "password":
 			  if (!value) {
@@ -142,53 +148,53 @@ const SignUp = () => {
 				<form>
 					<div style={{paddingBottom: "0.5rem"}}>
 					<input
-						style={{height:"2.5vh", width:"20vh"}}
+						style={{height:"2.5vh", width:"25vh"}}
 						type="text"
 						name="username"
 						placeholder='Enter Username'
 						value={input.username}
 						onChange={onInputChange}
 						onBlur={validateInput}></input>
-					{error.username && <span className='err'>{error.username}</span>}
+					{error.username && <span className='err' style={{ fontSize: '0.85rem', paddingLeft: '0.5vw', color: 'red' }}>{error.username}</span>}
 
 					<br></br>
 					</div>
 					<div style={{paddingBottom: "0.5rem"}}>
 					<input
-						style={{height:"2.5vh", width:"20vh"}}
+						style={{height:"2.5vh", width:"25vh"}}
 						type='text'
 						name='email'
 						placeholder='Enter Email'
 						value={input.email}
 						onChange={onInputChange}
 						onBlur={validateInput}></input>
-					{error.email && <span className='err'>{error.email}</span>}
-					
+					{error.email && <span className='err' style={{ fontSize: '0.85rem', paddingLeft: '0.5vw', color: 'red' }}>{error.email}</span>}
+
 					<br></br>
 					</div>
 					<div style={{paddingBottom: "0.75rem"}}>
 					<input
-						style={{height:"2.5vh", width:"20vh"}}
+						style={{height:"2.5vh", width:"25vh"}}
 						type="password"
 						name="password"
 						placeholder='Enter Password'
 						value={input.password}
 						onChange={onInputChange}
 						onBlur={validateInput}></input>
-					{error.password && <span className='err'>{error.password}</span>}
+					{error.password && <span className='err' style={{ fontSize: '0.85rem', paddingLeft: '0.5vw', color: 'red' }}>{error.password}</span>}
 
 					</div>
 					<div style={{paddingBottom: "0.75rem"}}>
 
 					<input
-						style={{height:"2.5vh", width:"20vh"}} 
+						style={{height:"2.5vh", width:"25vh"}} 
 						type="password"
 						name="confirmPassword"
 						placeholder='Enter Confirm Password'
 						value={input.confirmPassword}
 						onChange={onInputChange}
 						onBlur={validateInput}></input>
-					{error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
+					{error.confirmPassword && <span className='err' style={{ fontSize: '0.85rem', paddingLeft: '0.5vw', color: 'red' }}>{error.confirmPassword}</span>}
 
 					</div>
 					<div style={{paddingBottom: "0.5rem"}}>
@@ -197,9 +203,7 @@ const SignUp = () => {
 					<a href="./signin" style={{textDecoration:"none"}}>
                     	Already have an account: Sign In
                 	</a>
-
-					{/* creates an alert if there is an error
-					{message ? <div>{message}</div> : null} */}
+					
 				</form>
 			</div>
 		</div>
