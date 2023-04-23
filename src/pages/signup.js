@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 
 // python anywhere backend link
-const backendURL = 'http://zhangdzh.pythonanywhere.com';
+const backendURL = 'https://zhangdzh.pythonanywhere.com';
 
 const SignUp = () => {
 
