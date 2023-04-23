@@ -11,9 +11,8 @@ return (
 		backgroundSize: 'cover', 
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
-		height: '52rem',
-		backgroundAttachment: 'fixed',
-		overflow: 'hidden'
+		height: '50rem',
+		backgroundAttachment: 'fixed'
 	}}
 	>
 		<div
@@ -44,10 +43,7 @@ return (
 			paddingLeft: '10%'
 		}}
 		>
-			<h2>Yeseon: </h2>
-			<a href="https://www.linkedin.com/in/yeseon-kim" target="_blank"><img style={{ paddingTop: '2vh', paddingLeft: '1vw', maxWidth: '3vw', maxHeight: '3vw'}} src={linkedIn} /></a>
-
-			<h2 style={{ paddingLeft: '2vw' }}>Dorothy: </h2>
+			<h2>Dorothy: </h2>
 			<a href="https://www.linkedin.com/in/dzzhang/" target="_blank"><img style={{ paddingTop: '2vh', paddingLeft: '1vw', maxWidth: '3vw', maxHeight: '3vw'}} src={linkedIn} /></a>
 
 			<h2 style={{ paddingLeft: '2vw' }}>Jeffery: </h2>
@@ -55,6 +51,9 @@ return (
 
 			<h2 style={{ paddingLeft: '2vw' }}>Jun: </h2>
 			<a href="https://www.linkedin.com/in/junhyung-kim/" target="_blank"><img style={{ paddingTop: '2vh', paddingLeft: '1vw', maxWidth: '3vw', maxHeight: '3vw'}} src={linkedIn} /></a>
+
+			<h2 style={{ paddingLeft: '2vw' }}>Yeseon: </h2>
+			<a href="https://www.linkedin.com/in/yeseon-kim" target="_blank"><img style={{ paddingTop: '2vh', paddingLeft: '1vw', maxWidth: '3vw', maxHeight: '3vw'}} src={linkedIn} /></a>
 		</div>
 
 		</div>
