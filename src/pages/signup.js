@@ -98,6 +98,16 @@ const SignUp = () => {
 						required
 					/>
 					</div>
+					<div style={{paddingBottom: "0.75rem"}}>
+					<input
+						placeholder='Confirm Password'
+						type="password"
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+						style={{height:"2.5vh", width:"20vh"}}
+						required
+					/>
+					</div>
 					<div style={{paddingBottom: "0.5rem"}}>
 					<button type='submit' style={{height:"3.5vh"}}>Sign Up</button><br></br>
 					</div>
