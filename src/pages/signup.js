@@ -2,56 +2,9 @@ import React, { useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 
 // python anywhere backend link
-// const backendURL = 'zhangdzh.pythonanywhere.com';
+const backendURL = 'zhangdzh.pythonanywhere.com';
 
 const SignUp = () => {
-	// const [username, setUsername] = useState('');
-	// const [email, setEmail] = useState('');
-	// const [password, setPassword] = useState('');
-	// const [password2] = useState(''); 
-	// const passwordCheck = False; 
-	// const [message, setMessage] = useState('');
-
-	// function checkPassword () {
-	// 	if(password == password2) {
-	// 		passwordCheck = True;
-	// 	}
-	// }; 
-
-	// // call the users add endpoint using fetch
-	// const addUser = async (e) => {
-	// 	e.preventDefault();
-	// 	try {
-	// 		// TODO: make text into field variables
-	// 		let res = await fetch(`${backendURL}/users/add`, {
-	// 			method: 'POST',
-	// 			headers: {
-	// 				'Content-Type': 'application/json'
-	// 			},
-	// 			// body of the POST request
-	// 			body: JSON.stringify({
-	// 				username: username,
-	// 				email: email,
-	// 				password: password
-	// 			})
-	// 		});
-	// 		// not sure of purpose of this
-	// 		let resJson = await res.json();
-
-	// 		// reset states if ok
-	// 		if (res.status === 200) {
-	// 			setUsername("");
-	// 			setEmail("");
-	// 			setPassword("");
-	// 			setMessage("User created successfully");
-	// 		} else {
-	// 			setMessage("Some error occured");
-	// 		}
-	// 	} catch (err) {
-	// 		console.log(err);
-	// 	}
-	// 	console.log(message)
-	// };
 
 	const [input, setInput] = useState({
 		username: '',
@@ -119,6 +72,38 @@ const SignUp = () => {
 		  return stateObj;
 		});
 	}
+
+	// call the users add endpoint using fetch
+	const addUser = async (e) => {
+		e.preventDefault();
+		try {
+			// TODO: make text into field variables
+			let res = await fetch(`${backendURL}/users/add`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				// body of the POST request
+				body: JSON.stringify({
+					username: input.username,
+					email: input.email,
+					password: input.password
+				})
+			});
+			// not sure of purpose of this
+			let resJson = await res.json();
+
+			// reset states if ok
+			if (res.status === 200) {
+				input.username = "";
+				input.email = "";
+				input.password = "";
+				input.confirmPassword = ""; 
+			}
+		} catch (err) {
+			console.log(err);
+		}
+	};
 
 	return (
 		<div
@@ -198,12 +183,12 @@ const SignUp = () => {
 
 					</div>
 					<div style={{paddingBottom: "0.5rem"}}>
-					<button type='submit' style={{height:"3.5vh"}}>Sign Up</button><br></br>
+					<button type='submit' style={{height:"3.5vh"}} onClick={addUser}>Sign Up</button><br></br>
 					</div>
 					<a href="./signin" style={{textDecoration:"none"}}>
                     	Already have an account: Sign In
                 	</a>
-					
+
 				</form>
 			</div>
 		</div>
