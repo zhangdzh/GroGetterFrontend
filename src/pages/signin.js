@@ -12,9 +12,9 @@ const SignIn = () => {
         async function fetchData() {
             try {
                 const batchTrack = document.getElementById("batchSelect");
-                const fetchResponse = await fetch(`https://${backendURL}/users/dict`);
-                const data = await fetchResponse.json();
-                const users = Object.keys(data['Data'])
+                const fetchResponse = await fetch(`https://${backendURL}/users/list`);
+                const users = await fetchResponse.json();
+                // const users = Object.keys(data['Data'])
                 setUsers(users); 
 
                 for (let i = 0; i < users.length; i++) {
