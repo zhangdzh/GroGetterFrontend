@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
+import AppContext from '../config';
 // import { Dropdown, Option } from "../components/Dropdown/dropdown";
 
 const SignIn = () => {
@@ -62,8 +63,9 @@ const SignIn = () => {
 			});
 			// not sure of purpose of this
 			let resJson = await res.json();
-            console.log(input);
-            console.log(resJson);
+
+            AppContext.isAuthenticated = resJson;
+            
 			// reset states if ok
 			if (res.status === 200) {
 				input.username = "";
