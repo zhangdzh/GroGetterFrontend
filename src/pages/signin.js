@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
+import { useNavigate } from 'react-router-dom';
 // import { Dropdown, Option } from "../components/Dropdown/dropdown";
 
 const SignIn = () => {
-
+    const navigate = useNavigate();
     // python anywhere backend link
     const backendURL = 'zhangdzh.pythonanywhere.com';
     // const [users, setUsers] = useState([]);
@@ -113,8 +114,8 @@ const SignIn = () => {
                         <label>Password     </label>
                         <input placeholder='Password' type="password" name="password" style={{height:"2.5vh", width:"20vh"}} value={input.password} onChange={onInputChange} required />
                     </div>
-                    <div className="button">
-                        <input type="submit" style={{height:"3.5vh"}} onClick={login}/>
+                    <div className="button" onClick={login}>
+                        <input type="submit" style={{height:"3.5vh"}} onClick={()=> navigate('/groc')}/>
                     </div>
                 </form>
                 <a href="./signup" style={{textDecoration:"none", paddingTop:"1rem"}}>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
+import { useNavigate } from 'react-router-dom';
 
 // python anywhere backend link
 const backendURL = 'https://zhangdzh.pythonanywhere.com';
 
 const SignUp = () => {
-
+	const navigate = useNavigate();
 	const [input, setInput] = useState({
 		username: '',
 		email: '',
@@ -180,10 +181,11 @@ const SignUp = () => {
 						onChange={onInputChange}
 						onBlur={validateInput}></input>
 					{error.confirmPassword && <span className='err' style={{ fontSize: '0.85rem', paddingLeft: '0.5vw', color: 'red' }}>{error.confirmPassword}</span>}
-
 					</div>
-					<div style={{paddingBottom: "0.5rem"}}>
-					<button type='submit' style={{height:"3.5vh"}} onClick={addUser}>Sign Up</button><br></br>
+					<div style={{paddingBottom: "0.5rem"}} onClick={addUser}>
+					<button type = 'submit' style={{height:"3.5vh"}} onClick={()=> navigate('/signin')}>Sign Up</button>
+					{/* <button type='submit' style={{height:"3.5vh"}} onClick={addUser}>Sign Up</button> */}
+					<br></br>
 					</div>
 					<a href="./signin" style={{textDecoration:"none"}}>
                     	Already have an account: Sign In
