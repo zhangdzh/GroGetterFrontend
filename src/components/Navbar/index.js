@@ -70,9 +70,9 @@ const Navbar = () => {
 				<NavLink to='/groc' activestyle={{ color:'black' }}>
 					Grocery List
 				</NavLink>
-				<NavLink to='/signup' activestyle={{ color:'black' }}>
+				{/* <NavLink to='/signup' activestyle={{ color:'black' }}>
 					Sign Up
-				</NavLink>
+				</NavLink> */}
 				{/* Second Nav */}
 				{/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
 				</NavMenu>
