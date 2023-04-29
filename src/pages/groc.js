@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
+import { useNavigate } from 'react-router-dom';
 
 // python anywhere backend link
 const backendURL = 'zhangdzh.pythonanywhere.com';
@@ -8,7 +9,9 @@ const backendURL = 'zhangdzh.pythonanywhere.com';
 const Groc = () => {
 	const [time, setTime] = useState(new Date());
 	const [groceryList, setGroceryList] = useState([]);
-	const [Sign, setSign] = useState('+')
+	const [Sign, setSign] = useState('+');
+	const navigate = useNavigate();
+
 
 	function handleClick () {
 		setSign('+')
@@ -81,7 +84,7 @@ const Groc = () => {
 					}}
 				>
 					<h1>Manage your Grocery List here!</h1>
-					<a href="./addGroc"><button style={{backgroundColor:"red", borderRadius: "10px", maxWidth:"5vw", borderStyle:"None"}} Click={handleClick}>{Sign}</button></a>
+					<button style={{backgroundColor:"red", borderRadius: "10px", maxWidth:"5vw", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
 				</div>
 			</div>
 		);
