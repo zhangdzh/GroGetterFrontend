@@ -99,6 +99,7 @@ const AddGroc = () => {
                     </div> */}
                     <div style={{paddingBottom: "0.5rem"}}>
                         <select id="types" name="grocery_type" value={input.grocery_type} onChange={onInputChange}>
+                            <option value=""></option>
                             <option value="Baked Goods">Baked Goods</option>
                             <option value="Carbs">Carbs</option>
                             <option value="Fruit">Fruit</option>
