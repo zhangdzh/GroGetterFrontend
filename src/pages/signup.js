@@ -93,6 +93,7 @@ const SignUp = () => {
 			});
 			// not sure of purpose of this
 			let resJson = await res.json();
+			console.log(resJson);
 
 			// reset states if ok
 			if (res.status === 200) {
@@ -129,8 +130,6 @@ const SignUp = () => {
 				}}
 			>
 				<h1>New User: Sign Up</h1>
-				{/* form that calls addUser once submitted */}
-				{/* <form onSubmit={addUser}> */}
 				<form>
 					<div style={{paddingBottom: "0.5rem"}}>
 					<input
@@ -184,7 +183,6 @@ const SignUp = () => {
 					</div>
 					<div style={{paddingBottom: "0.5rem"}} onClick={addUser}>
 					<button type = 'submit' style={{height:"3.5vh"}} onClick={()=> navigate('/signin')}>Sign Up</button>
-					{/* <button type='submit' style={{height:"3.5vh"}} onClick={addUser}>Sign Up</button> */}
 					<br></br>
 					</div>
 					<a href="./signin" style={{textDecoration:"none"}}>

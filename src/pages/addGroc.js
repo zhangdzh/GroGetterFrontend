@@ -94,9 +94,6 @@ const AddGroc = () => {
                     <div style={{paddingBottom: "0.5rem"}}>
                         <input type="text" placeholder="Item Name" name="item" value={input.item} onChange={onInputChange}></input><br></br>
                     </div>
-                    {/* <div style={{paddingBottom: "0.5rem"}}>
-                        <input type="text" placeholder="Type" name="grocery_type" value={input.grocery_type} onChange={onInputChange}></input><br></br>
-                    </div> */}
                     <div style={{paddingBottom: "0.5rem"}}>
                         <select id="types" name="grocery_type" value={input.grocery_type} onChange={onInputChange}>
                             <option value=""></option>
