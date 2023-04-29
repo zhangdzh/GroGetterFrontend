@@ -19,7 +19,7 @@ const AddGroc = () => {
 	});
 
     function handleClick () {
-		setSign('+')
+		setSign('<')
 	  }
 
     const onInputChange = e => {
@@ -56,10 +56,10 @@ const AddGroc = () => {
 
 			// reset input form if ok
 			if (res.status === 200) {
-				input.itemname = "";
-				input.type = "";
+				input.item = "";
+				input.grocery_type = "";
 				input.quantity = "";
-				input.expdate = ""; 
+				input.expiration_date = ""; 
 			}
 		} catch (err) {
 			console.log(err);

@@ -23,29 +23,6 @@ const SignIn = () => {
 		}));
 	}
 
-    // useEffect( () => {
-    //     async function fetchData() {
-    //         try {
-    //             const batchTrack = document.getElementById("batchSelect");
-    //             const fetchResponse = await fetch(`https://${backendURL}/users/list`);
-    //             const users = await fetchResponse.json();
-    //             // const users = Object.keys(data['Data'])
-    //             setUsers(users); 
-
-    //             for (let i = 0; i < users.length; i++) {
-    //                 const newOption = document.createElement("option");
-    //                 newOption.value = users[i];
-    //                 newOption.text = users[i];
-    //                 batchTrack.appendChild(newOption);
-    //             }
-
-    //         } catch (err) {
-    //             console.log(err); 
-    //         }
-    //     }
-    //     fetchData();
-    // }, []);
-
     // call the users add endpoint using fetch
 	const login = async (e) => {
 		e.preventDefault();

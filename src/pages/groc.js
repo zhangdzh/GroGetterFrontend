@@ -11,47 +11,17 @@ const Groc = () => {
 	const [time, setTime] = useState(new Date());
 	const [groceryList, setGroceryList] = useState([]);
 	const [Sign, setSign] = useState('+');
+	const [Sign1, setSign1] = useState('-');
 	const navigate = useNavigate();
 
 
 	function handleClick () {
-		setSign('+')
-	  }
+		setSign('+');
+	}
 
-	const getGroc = async (e) => {
-		e.preventDefault();
-		try {
-			let res = await fetch(`${backendURL}/groc/items`, {
-				method: 'GET',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			});
-			let resJson = await res.json();
-			setGroceryList(resJson);
-		} catch (err) {
-			console.log(err);
-		}
-	};
-
-	// test function for the grocDict endpoint
-	// which uses the get_grocery_list function
-	const [groceryDict, setGrocDict] = useState({});
-	const grocDict = async (e) => {
-		e.preventDefault();
-		try {
-			let res = await fetch(`${backendURL}/groc/dict`, {
-				method: 'GET',
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			});
-			let resJson = await res.json();
-			setGrocDict(resJson);
-		} catch (err) {
-			// console.log(err);
-		}
-	};
+	function handleClick1 () {
+		setSign1('-');
+	}
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -87,6 +57,7 @@ const Groc = () => {
 					<h1> Welcome {AppContext.username}! </h1>
 					<h2>Manage your Grocery List here! 
 						<button style={{marginLeft:"25rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#57E552", borderRadius: "10px", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
+						<button style={{marginLeft:"1rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#FF6242", borderRadius: "10px", borderStyle:"None"}} Click={handleClick1} onClick={()=> navigate('/removeGroc')}>{Sign1}</button>
 					</h2>
 
 					<GrocJsonDataDisplay/>

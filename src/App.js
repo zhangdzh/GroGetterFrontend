@@ -8,6 +8,7 @@ import Groc from './pages/groc';
 import SignUp from './pages/signup';
 import SignIn from './pages/signin';
 import AddGroc from './pages/addGroc';
+import RemoveGroc from './pages/removeGroc';
 
 function App() {
 return (
@@ -20,6 +21,7 @@ return (
 		<Route path='/signup' element={<SignUp />} />
 		<Route path='/signin' element={<SignIn />} />
 		<Route path='/addGroc' element={<AddGroc />} />
+		<Route path='/removeGroc' element={<RemoveGroc />} />
 	</Routes>
 	</Router>
 );

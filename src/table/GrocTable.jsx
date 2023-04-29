@@ -22,7 +22,6 @@ function JsonDataDisplay(){
                         <th style={{border: "1px solid black", borderCollapse: "collapse", padding: "3vh"}} scope="col">Item Type</th>
                         <th style={{border: "1px solid black", borderCollapse: "collapse", padding: "3vh"}} scope="col">Quantity</th>
                         <th style={{border: "1px solid black", borderCollapse: "collapse", padding: "3vh"}} scope="col">Expiration Date</th>
-                        <th style={{border: "1px solid black", borderCollapse: "collapse", padding: "3vh"}} scope="col">Remove</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,7 +30,6 @@ function JsonDataDisplay(){
                         <td>snacks</td>
                         <td>1</td>
                         <td>5/20/23</td>
-                        <td>delete</td>
                     </tr>
                 </tbody>
             </table>
