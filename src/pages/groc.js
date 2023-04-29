@@ -11,7 +11,7 @@ const Groc = () => {
 	const [time, setTime] = useState(new Date());
 	const [groceryList, setGroceryList] = useState([]);
 	const [Sign, setSign] = useState('+');
-	const [Sign1, setSign1] = useState('-');
+	const [Sign1, setSign1] = useState('⁠–');
 	const navigate = useNavigate();
 
 
