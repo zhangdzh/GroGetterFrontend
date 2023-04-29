@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
 
@@ -6,8 +6,13 @@ import AppContext from '../config';
 const backendURL = 'zhangdzh.pythonanywhere.com';
 
 const Groc = () => {
-
+	const [time, setTime] = useState(new Date());
 	const [groceryList, setGroceryList] = useState([]);
+	const [Sign, setSign] = useState('+')
+
+	function handleClick () {
+		setSign('+')
+	  }
 
 	const getGroc = async (e) => {
 		e.preventDefault();
@@ -44,6 +49,14 @@ const Groc = () => {
 		}
 	};
 
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setTime(new Date());
+		}, 1);
+
+		return () => clearInterval(interval);
+	}, []);
+
 	if(AppContext.isAuthenticated) {
 		return (
 			<div
@@ -63,12 +76,12 @@ const Groc = () => {
 						justifyContent: 'Left',
 						flexDirection: 'Column',
 						alignItems: 'Left',
-						height: '10vh',
+						height: '30vh',
 						paddingLeft: '15rem'
 					}}
 				>
 					<h1>Manage your Grocery List here!</h1>
-	
+					<a href="./addGroc"><button style={{backgroundColor:"red", borderRadius: "10px", maxWidth:"5vw", borderStyle:"None"}} Click={handleClick}>{Sign}</button></a>
 				</div>
 			</div>
 		);
