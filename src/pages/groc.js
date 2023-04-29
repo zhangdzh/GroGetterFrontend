@@ -83,8 +83,9 @@ const Groc = () => {
 						paddingLeft: '15rem'
 					}}
 				>
-					<h1>Manage your Grocery List here!</h1>
-					<button style={{backgroundColor:"red", borderRadius: "10px", maxWidth:"5vw", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
+					<h1>Manage your Grocery List here! 
+						<button style={{marginLeft:"20rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"red", borderRadius: "10px", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
+					</h1>
 				</div>
 			</div>
 		);
