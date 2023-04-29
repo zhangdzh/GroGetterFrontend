@@ -86,6 +86,7 @@ const Groc = () => {
 					<h1>Manage your Grocery List here! 
 						<button style={{marginLeft:"20rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#57E552", borderRadius: "10px", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
 					</h1>
+					
 				</div>
 			</div>
 		);
