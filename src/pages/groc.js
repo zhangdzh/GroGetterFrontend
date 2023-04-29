@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
 import { useNavigate } from 'react-router-dom';
+import GrocJsonDataDisplay from '../table/GrocTable'
 
 // python anywhere backend link
 const backendURL = 'zhangdzh.pythonanywhere.com';
@@ -83,9 +84,12 @@ const Groc = () => {
 						paddingLeft: '15rem'
 					}}
 				>
-					<h1>Manage your Grocery List here! 
-						<button style={{marginLeft:"20rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#57E552", borderRadius: "10px", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
-					</h1>
+					<h1> Welcome {AppContext.username}! </h1>
+					<h2>Manage your Grocery List here! 
+						<button style={{marginLeft:"25rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#57E552", borderRadius: "10px", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
+					</h2>
+
+					<GrocJsonDataDisplay/>
 				</div>
 			</div>
 		);
