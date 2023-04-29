@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
 import { useNavigate } from 'react-router-dom';
-// import { Dropdown, Option } from "../components/Dropdown/dropdown";
 
 const SignIn = () => {
     const navigate = useNavigate();
     // python anywhere backend link
     const backendURL = 'zhangdzh.pythonanywhere.com';
-    // const [users, setUsers] = useState([]);
 
     const [input, setInput] = useState({
 		username: '',

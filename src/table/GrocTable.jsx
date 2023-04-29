@@ -1,17 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import AppContext from '../config';
 
 function JsonDataDisplay(){
-    // const DisplayData=JsonData.map(
-    //     (info)=>{
-    //         return(
-    //             <tr>
-    //                 <td>{info.id}</td>
-    //                 <td>{info.name}</td>
-    //                 <td>{info.city}</td>
-    //             </tr>
-    //         )
-    //     }
-    // )
+    const backendURL = 'zhangdzh.pythonanywhere.com';
+
+    const [groc_dict, setGroc] = useState([]);
+
+    useEffect( () => {
+        async function fetchData() {
+            try {
+                const fetchResponse = await fetch(`https://${backendURL}/groc/items/${AppContext.username}`);
+                const groc_dictionary = await fetchResponse.json();
+
+                setGroc(groc_dictionary);
+
+            } catch (err) {
+                console.log(err); 
+            }
+        }
+        fetchData();
+    }, [groc_dict]);
+
+    const DisplayData=groc_dict.map(
+        (info)=>{
+            return(
+                <tr>
+                    <td>{info.item}</td>
+                    <td>{info.grocery_type}</td>
+                    <td>{info.quantity}</td>
+                    <td>{info.expiration_date}</td>
+                </tr>
+            )
+        }
+    )
  
     return(
         <div>
@@ -25,12 +46,7 @@ function JsonDataDisplay(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="row">cookie</td>
-                        <td>snacks</td>
-                        <td>1</td>
-                        <td>5/20/23</td>
-                    </tr>
+                    {DisplayData}
                 </tbody>
             </table>
              
