@@ -53,8 +53,8 @@ const Groc = () => {
 						height: '30vh',
 						paddingLeft: '15rem'
 					}}
-				>
-					<h1> Welcome {AppContext.username}! </h1>
+				>	
+					<h1>Welcome, {AppContext.username}!</h1>
 					<h2>Manage your Grocery List here! 
 						<button style={{marginLeft:"25rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#57E552", borderRadius: "10px", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
 						<button style={{marginLeft:"1rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#FF6242", borderRadius: "10px", borderStyle:"None"}} Click={handleClick1} onClick={()=> navigate('/removeGroc')}>{Sign1}</button>
