@@ -24,6 +24,7 @@ const Navbar = () => {
 
 	const reset = () => {
 		AppContext.isAuthenticated = false; 
+		AppContext.username = ''; 
 	};
 
 	if(AppContext.isAuthenticated == false) {

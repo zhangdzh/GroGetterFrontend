@@ -66,6 +66,13 @@ const SignIn = () => {
 			let resJson = await res.json();
 
             AppContext.isAuthenticated = resJson;
+
+            if(AppContext.isAuthenticated) {
+                AppContext.username = input.username; 
+            }
+
+            console.log(AppContext.isAuthenticated);
+            console.log(AppContext.username);
             
 			// reset states if ok
 			if (res.status === 200) {
