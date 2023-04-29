@@ -31,7 +31,7 @@ const RemoveGroc = () => {
 		try {
 			// TODO: make text into field variables
 			let res = await fetch(`${backendURL}/groc/remove`, {
-				method: 'POST',
+				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json'
 				},
