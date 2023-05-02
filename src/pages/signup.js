@@ -96,12 +96,11 @@ const SignUp = () => {
 			console.log(resJson);
 
 			// reset states if ok
-			if (res.status === 200) {
-				input.username = "";
-				input.email = "";
-				input.password = "";
-				input.confirmPassword = ""; 
-			}
+			input.username = "";
+			input.email = "";
+			input.password = "";
+			input.confirmPassword = ""; 
+
 		} catch (err) {
 			console.log(err);
 		}

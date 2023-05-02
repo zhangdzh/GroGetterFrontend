@@ -55,12 +55,10 @@ const AddGroc = () => {
             console.log("Inside AddGroc:", resJson);
 
 			// reset input form if ok
-			if (res.status === 200) {
-				input.item = "";
-				input.grocery_type = "";
-				input.quantity = "";
-				input.expiration_date = ""; 
-			}
+			input.item = "";
+			input.grocery_type = "";
+			input.quantity = "";
+			input.expiration_date = ""; 
 		} catch (err) {
 			console.log(err);
 		}

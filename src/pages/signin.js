@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
 import { useNavigate } from 'react-router-dom';
@@ -50,10 +50,9 @@ const SignIn = () => {
             console.log(AppContext.username);
             
 			// reset states if ok
-			if (res.status === 200) {
-				input.username = "";
-				input.password = "";
-			}
+			input.username = "";
+			input.password = "";
+
 		} catch (err) {
 			console.log(err);
 		}
