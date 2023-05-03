@@ -45,10 +45,8 @@ const RemoveGroc = () => {
             // not sure of purpose of this
 			let resJson = await res.json();
 
-			// reset input form if ok
-			if (res.status === 200) {
-				input.item = "";
-			}
+			input.item = "";
+			
 		} catch (err) {
 			console.log(err);
 		}

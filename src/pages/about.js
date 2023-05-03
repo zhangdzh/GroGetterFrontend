@@ -11,7 +11,7 @@ return (
 		backgroundSize: 'cover', 
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
-		height: '50rem',
+		height: '51rem',
 		backgroundAttachment: 'fixed'
 	}}
 	>
@@ -28,7 +28,7 @@ return (
 		>
 		<h1>About</h1>
 
-		<h2>GroGetter allows users to create grocery lists and allows users to add/remove items for their grocery list.</h2>
+		<h2>GroGetter allows users to create grocery lists and allows users to add/remove items for their grocery list. Users are able to enter Item Name, Type, Quantity, and Expiration Date.</h2>
 
 		<h2>This project was created by Dorothy, Yeseon, Jeffery, and Jun as their Senior Design Project, a class at NYU Tandon School of Engineering.</h2>
 
