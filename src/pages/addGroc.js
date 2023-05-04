@@ -3,7 +3,7 @@ import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
 import { useNavigate } from 'react-router-dom';
 
-const backendURL = 'https://zhangdzh.pythonanywhere.com';
+const backendURL = 'zhangdzh.pythonanywhere.com';
 
 const AddGroc = () => {
 	console.log("add " + AppContext.isAuthenticated);
@@ -35,7 +35,7 @@ const AddGroc = () => {
 		e.preventDefault();
 		try {
 			// TODO: make text into field variables
-			let res = await fetch(`${backendURL}/groc/add`, {
+			let res = await fetch(`https://${backendURL}/groc/add`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -50,9 +50,8 @@ const AddGroc = () => {
 				})
 			});
 
-            // not sure of purpose of this
+            // eslint-disable-next-line
 			let resJson = await res.json();
-            console.log("Inside AddGroc:", resJson);
 
 			// reset input form if ok
 			input.item = "";

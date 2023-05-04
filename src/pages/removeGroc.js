@@ -3,7 +3,7 @@ import background from '../imgs/yellow_background.jpg'
 import AppContext from '../config';
 import { useNavigate } from 'react-router-dom';
 
-const backendURL = 'https://zhangdzh.pythonanywhere.com';
+const backendURL = 'zhangdzh.pythonanywhere.com';
 
 const RemoveGroc = () => {
     const [Sign, setSign] = useState('<');
@@ -30,7 +30,7 @@ const RemoveGroc = () => {
 		e.preventDefault();
 		try {
 			// TODO: make text into field variables
-			let res = await fetch(`${backendURL}/groc/remove`, {
+			let res = await fetch(`https://${backendURL}/groc/remove`, {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ const RemoveGroc = () => {
 				})
 			});
 
-            // not sure of purpose of this
+            // eslint-disable-next-line
 			let resJson = await res.json();
 
 			input.item = "";

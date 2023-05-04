@@ -4,16 +4,12 @@ import AppContext from '../config';
 import { useNavigate } from 'react-router-dom';
 import GrocJsonDataDisplay from '../table/GrocTable'
 
-// python anywhere backend link
-const backendURL = 'zhangdzh.pythonanywhere.com';
-
 const Groc = () => {
+	// eslint-disable-next-line
 	const [time, setTime] = useState(new Date());
-	const [groceryList, setGroceryList] = useState([]);
 	const [Sign, setSign] = useState('+');
 	const [Sign1, setSign1] = useState('⁠–');
 	const navigate = useNavigate();
-
 
 	function handleClick () {
 		setSign('+');

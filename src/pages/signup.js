@@ -3,7 +3,7 @@ import background from '../imgs/yellow_background.jpg'
 import { useNavigate } from 'react-router-dom';
 
 // python anywhere backend link
-const backendURL = 'https://zhangdzh.pythonanywhere.com';
+const backendURL = 'zhangdzh.pythonanywhere.com';
 
 const SignUp = () => {
 	const navigate = useNavigate();
@@ -79,7 +79,7 @@ const SignUp = () => {
 		e.preventDefault();
 		try {
 			// TODO: make text into field variables
-			let res = await fetch(`${backendURL}/users/add`, {
+			let res = await fetch(`https://${backendURL}/users/add`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
