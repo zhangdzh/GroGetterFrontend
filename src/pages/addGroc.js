@@ -34,7 +34,7 @@ const AddGroc = () => {
 	const addGroc = async (e) => {
 		e.preventDefault();
 		try {
-			// TODO: make text into field variables
+			// fetch data from endpoint
 			let res = await fetch(`https://${backendURL}/groc/add`, {
 				method: 'POST',
 				headers: {
@@ -58,6 +58,7 @@ const AddGroc = () => {
 			input.grocery_type = "";
 			input.quantity = "";
 			input.expiration_date = ""; 
+			
 		} catch (err) {
 			console.log(err);
 		}

@@ -25,7 +25,7 @@ const SignIn = () => {
 	const login = async (e) => {
 		e.preventDefault();
 		try {
-			// TODO: make text into field variables
+			// fetch data from endpoint
 			let res = await fetch(`https://${backendURL}/users/login`, {
 				method: 'POST',
 				headers: {
@@ -82,10 +82,6 @@ const SignIn = () => {
                 }}
             >
                 <h1>Returning User: Sign In</h1>
-                {/* <div className="username">
-                    <label>Username     </label>
-                    <select id="batchSelect" style={{height:"3.5vh", width:"20vh"}}> {users} </select>
-                </div> */}
                 <form>
                     <div className="username" style={{paddingTop:"0.5rem", paddingBottom:"0.5rem"}}>
                         <label>Username     </label>

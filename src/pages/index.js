@@ -1,6 +1,7 @@
 import React from 'react';
 import homeImg from '../imgs/homeImg.png'
 
+// launch page for GroGetter
 const Home = () => {
 return (
 	<div

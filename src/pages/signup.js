@@ -78,7 +78,7 @@ const SignUp = () => {
 	const addUser = async (e) => {
 		e.preventDefault();
 		try {
-			// TODO: make text into field variables
+			// register info using endpoint
 			let res = await fetch(`https://${backendURL}/users/add`, {
 				method: 'POST',
 				headers: {

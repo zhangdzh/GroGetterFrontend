@@ -37,7 +37,7 @@ function JsonDataDisplay(){
     return(
         <div>
             <table style={{border: "1px solid black", borderCollapse: "collapse", padding: "10vh"}} border="1">
-                <thead class="thead-light">
+                <thead class="thead-light"  style={{ background: "#FFD33C"}}>
                     <tr>
                         <th style={{border: "1px solid black", borderCollapse: "collapse", padding: "3vh"}} scope="col">Item Name</th>
                         <th style={{border: "1px solid black", borderCollapse: "collapse", padding: "3vh"}} scope="col">Item Type</th>

@@ -29,7 +29,7 @@ const RemoveGroc = () => {
 	const removeGroc = async (e) => {
 		e.preventDefault();
 		try {
-			// TODO: make text into field variables
+			// update data using endpoint
 			let res = await fetch(`https://${backendURL}/groc/remove`, {
 				method: 'DELETE',
 				headers: {

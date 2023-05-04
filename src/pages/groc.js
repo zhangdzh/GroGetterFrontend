@@ -11,6 +11,7 @@ const Groc = () => {
 	const [Sign1, setSign1] = useState('⁠–');
 	const navigate = useNavigate();
 
+	// buttom for add/remove groc items
 	function handleClick () {
 		setSign('+');
 	}
@@ -27,6 +28,7 @@ const Groc = () => {
 		return () => clearInterval(interval);
 	}, []);
 
+	// if user is signed in
 	if(AppContext.isAuthenticated) {
 		return (
 			<div
@@ -55,7 +57,7 @@ const Groc = () => {
 						<button style={{marginLeft:"25rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#57E552", borderRadius: "10px", borderStyle:"None"}} Click={handleClick} onClick={()=> navigate('/addGroc')}>{Sign}</button>
 						<button style={{marginLeft:"1rem", paddingLeft:"1.5rem", paddingRight:"1.5rem", fontSize:"2vw", backgroundColor:"#FF6242", borderRadius: "10px", borderStyle:"None"}} Click={handleClick1} onClick={()=> navigate('/removeGroc')}>{Sign1}</button>
 					</h2>
-
+					{/*display imported table*/}
 					<GrocJsonDataDisplay/>
 				</div>
 			</div>
